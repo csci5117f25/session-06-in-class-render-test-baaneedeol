@@ -18,17 +18,17 @@
             <input type="text" name="name" required>
             <br>
             <label for="message">Message:</label>
-            <input type="text" name="message" required>
+            <textarea name="text"></textarea>   
             <br>
             <button type="submit">Sign Guestbook</button>
         </form>
 
         <h2>Guest List</h2>
-        <ol>
+        <ul>
             {% for guest in guests %}
                 <li><strong>{{ guest['name'] }}</strong>: {{ guest['message'] }}</li>
             {% endfor %}
-        </ol>
+        </ul>
 
     </body>
 </html>
