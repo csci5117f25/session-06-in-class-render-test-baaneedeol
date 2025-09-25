@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+
+        <title>Baanee's Guestbook</title>
+    </head>
+
+    <body>
+    
+        <h1>Guestbook Hosted Via Render</h1>
+
+        <form method = "post">
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
+            <br>
+            <label for="message">Message:</label>
+            <input type="text" name="message" required>
+            <br>
+            <button type="submit">Sign Guestbook</button>
+        </form>
+
+        <h2>Guest List</h2>
+        <ol>
+            {% for guest in guests %}
+                <li><strong>{{ guest['name'] }}</strong>: {{ guest['message'] }}</li>
+            {% endfor %}
+        </ol>
+
+    </body>
+</html>
