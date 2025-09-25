@@ -8,6 +8,10 @@ from psycopg2.extras import DictCursor
 
 app = Flask(__name__)
 
+@app.before_first_request
+def init_db_pool():
+    setup(app)
+    
 # @app.route('/')
 # @app.route('/<name>')
 # def hello(name=None):
