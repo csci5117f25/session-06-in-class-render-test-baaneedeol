@@ -5,6 +5,9 @@ from flask import current_app
 import psycopg2
 from psycopg2.pool import ThreadedConnectionPool
 from psycopg2.extras import DictCursor
+from dotenv import load_dotenv
+
+load_dotenv()  
 
 app = Flask(__name__)
 
