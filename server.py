@@ -12,8 +12,9 @@ load_dotenv()
 
 app = Flask(__name__)
 
-db.setup(app)
-
+with app.app_context():
+    db.setup(app)
+    
 # @app.route('/')
 # @app.route('/<name>')
 # def hello(name=None):
