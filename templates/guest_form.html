@@ -14,12 +14,12 @@
         <h1>Session exists</h1>
         <code>
             <pre>
-                {{session.user|tojson}}
+                {{session |tojson}}
             </pre>
         </code>
         {% else %}
         <h1>No session</h1>
-        {% end if %}
+        {% endif %}
     
         <h1>Guestbook Hosted Via Render</h1>
 

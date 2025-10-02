@@ -58,7 +58,6 @@ def index():
         cur.execute("SELECT name, message FROM guestbook ORDER BY created_at DESC;")
         guests = cur.fetchall()
 
-    # define name = None to avoid NameError in GET
     return render_template("guest_form.html", name=None, guests=guests)
 
 @app.route("/logout")
